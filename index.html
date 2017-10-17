@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="./icon/resume.png">
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" media="screen and (min-width:951px)" href="./css/index.css">
-    <link rel="stylesheet" media="screen and (max-width:950px)"  href="./css/indexMedia.css">
+    <link rel="stylesheet" media="screen and (max-width:950px)"  href="./css/indexM.css">
     <!-- <script src="./dist/bundle.js"></script> -->
     <title>个人简历</title>
 </head>
@@ -39,6 +39,13 @@
         </div>
     </div>
     <script src="./js/jquery-3.2.1.js"></script>
-    <script src="./js/index.js"></script>
+    <script>
+        $(function(){
+            $('.container').on('click', e => {
+                let html = $(e.target).attr('data-html')
+                window.location.href = './html/'+html+'.html'
+            })
+        }) 
+    </script>
 </body>
 </html>

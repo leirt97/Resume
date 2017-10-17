@@ -5,20 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <link rel="icon" type="image/x-icon" href="../icon/resume.png">
+    <link rel="stylesheet" href="../css/info.css" media="screen and (min-width:671px)">
+    <link rel="stylesheet" href="../css/infoM.css" media="screen and (max-width:670px)">
     <title>基本信息</title>
 </head>
 <body>
     <div class="nav">
         <div class="nav_head">
-            <h2>BasicInfo</h2>
+            <h1>Resume</h1>
+            <span data-url="down" class="animate"></span>
         </div>
-        <ul>
-            <li>Home</li>
-            <li>BasicInfo</li>
-            <li>Ability</li>
-            <li>Project</li>
-            <li>Connect</li>
+        <ul class="animate">
+            <li class="animate" data-html="index">Home</li>
+            <li class="animate active" data-html="info">BasicInfo</li>
+            <li class="animate" data-html="ability">Ability</li>
+            <li class="animate" data-html="project">Project</li>
+            <li class="animate" data-html="connect">Connect</li>
         </ul>
+        <div class="nav_footer">
+            <ul>
+                <li><a class="animate" href="https://www.github.com/leirt97"></a></li>
+                <li><a class="animate" href="#"></a></li>
+                <li><a class="animate" href="http://weibo.com/u/5242053562?refer_flag=1001030201_&is_all=1"></a></li>                
+            </ul>
+            <p>&copy;leirt97's resume 2017</p>
+        </div>
     </div>
+    <div class="content">
+        <div class="cont_head">
+            <h1>基本信息</h1>
+            <p>雷昊 求职意向：web前端开发</p>
+        </div>
+        <hr>
+        <div class="cont_img">
+            <div class="img animate">毕业学校</div>
+            <div class="img animate">手机号码</div>
+            <div class="img animate">电子邮箱</div>
+            <div class="img animate">微信号码</div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $('.nav_head>span').on('click', e => {
+                if(($(e.target).attr('data-url').indexOf('down')!=-1)) {
+                    $(e.target).attr('data-url','up').addClass('up');
+                    $('.nav>ul').css({
+                        'top': '95px'
+                    });
+                } else {
+                    $(e.target).attr('data-url','down').removeClass('up');
+                    $('.nav>ul').css({
+                        'top': '-500px'
+                    });
+                }                   
+            })
+            $('.nav>ul').on('click', e => {
+                console.log(e);
+                console.log(e.target);
+                console.log(this);
+                let html = $(e.target).attr('data-html');
+                if('index' === html) {
+                    window.location.href = '../index.html';
+                } else {
+                    window.location.href = './'+html+'.html';
+                }
+            })
+        })
+    </script>
 </body>
 </html>

@@ -5,9 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <link rel="icon" type="image/x-icon" href="../icon/resume.png">
+    <link rel="stylesheet" href="../css/ability.css">
     <title>个人能力</title>
 </head>
 <body>
-    <div>个人能力</div>
+    <div class="nav">
+        <div class="nav_head">
+            <h1>Resume</h1>
+            <span data-url="down" class="animate"></span>
+        </div>
+        <ul class="animate">
+            <li class="animate" data-html="index">Home</li>
+            <li class="animate" data-html="info">BasicInfo</li>
+            <li class="animate active" data-html="ability">Ability</li>
+            <li class="animate" data-html="project">Project</li>
+            <li class="animate" data-html="connect">Connect</li>
+        </ul>
+        <div class="nav_footer">
+            <ul>
+                <li><a class="animate" href="https://www.github.com/leirt97"></a></li>
+                <li><a class="animate" href="#"></a></li>
+                <li><a class="animate" href="http://weibo.com/u/5242053562?refer_flag=1001030201_&is_all=1"></a></li>                
+            </ul>
+            <p>&copy;leirt97's resume 2017</p>
+        </div>
+        <div class="content">
+            <div class="cont_head">
+                <h1>个人能力</h1>
+                <p>我的技能</p>
+            </div>
+            <hr>
+            <div class="cont_ul">
+                <ul>
+                    <li>熟悉HTML，了解语义化开发，熟悉CSS2.1和部分CSS3新特性，有将设计稿完整实现的能力，能够使用flex布局进行布局。</li>
+                    <li>熟悉原生JavaScript，掌握如：原型、闭包、作用域链、面向对象等重要概念，了解ES6部分新特性。</li>
+                    <li>熟悉jQuery的使用，掌握常用选择器及常用API。</li>
+                    <li>了解React框架，具有react+redux+react-redux+react-router开发经验，了解Vue框架。</li>
+                    <li>使用过webpack和github，具备一定的独立完成项目的能力。</li>
+                    <li>了解前后端分离，从前到后的开发过程。有过前端配合Node.js、Express框架的开发经验。</li>
+                    <li>了解HTTP协议及缓存</li>
+                    <li>了解Photoshop基本操作。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $('.nav_head>span').on('click', e => {
+                if(($(e.target).attr('data-url').indexOf('down')!=-1)) {
+                    $(e.target).attr('data-url','up').addClass('up');
+                    $('.nav>ul').css({
+                        'top': '95px'
+                    });
+                } else {
+                    $(e.target).attr('data-url','down').removeClass('up');
+                    $('.nav>ul').css({
+                        'top': '-500px'
+                    });
+                }                   
+            })
+            $('.nav>ul').on('click', e => {
+                console.log(e);
+                console.log(e.target);
+                console.log(this);
+                let html = $(e.target).attr('data-html');
+                if('index' === html) {
+                    window.location.href = '../index.html';
+                } else {
+                    window.location.href = './'+html+'.html';
+                }
+            })
+        })
+    </script>
 </body>
 </html>

@@ -50,20 +50,13 @@
             $('.nav_head>span').on('click', e => {
                 if(($(e.target).attr('data-url').indexOf('down')!=-1)) {
                     $(e.target).attr('data-url','up').addClass('up');
-                    $('.nav>ul').css({
-                        'top': '95px'
-                    });
+                    $('.nav>ul').css('top', '95px');
                 } else {
                     $(e.target).attr('data-url','down').removeClass('up');
-                    $('.nav>ul').css({
-                        'top': '-500px'
-                    });
+                    $('.nav>ul').css('top', '-500px');
                 }                   
             })
             $('.nav>ul').on('click', e => {
-                console.log(e);
-                console.log(e.target);
-                console.log(this);
                 let html = $(e.target).attr('data-html');
                 if('index' === html) {
                     window.location.href = '../index.html';

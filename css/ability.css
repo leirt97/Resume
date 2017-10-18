@@ -118,7 +118,6 @@ div{display: inline-block;}
     top: 0;left: 0;
     margin-left: 310px;
 }
-.content ul{list-style: disc;}
 .cont_head{
     height: 50px;
     line-height: 50px;
@@ -133,4 +132,15 @@ div{display: inline-block;}
 .cont_head>p{
     color: #666;
     font-size: 20px;
+}
+.cont_ul{
+
+}
+.cont_ul>ul{list-style: disc;}
+.cont_ul>ul>li{
+    padding: 15px;
+}
+.cont_ul>ul>li>span{
+    color: skyblue;
+    font-weight: bold;
 }

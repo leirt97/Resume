@@ -139,7 +139,6 @@ div{display: inline-block;}
 .cont_p>p{
     line-height: 5vw;
     color: #666; 
-    background-color: rgb(253, 251, 251);   
 }
 .cont_p>ul{
     width: 100%;height: auto;
@@ -147,4 +146,8 @@ div{display: inline-block;}
 }
 .cont_p>ul>li{
     padding: 10px 0;
+}
+/* 页脚 */
+footer{
+    display: none;
 }

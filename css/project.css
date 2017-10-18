@@ -160,6 +160,7 @@ div{display: inline-block;}
 .cont_prj>.prj>p{
     color: #666;
 }
+footer{display: none;}
 @media screen and (min-width:691px) and (max-width:1160px) {
     .cont_prj{
         justify-content: left;

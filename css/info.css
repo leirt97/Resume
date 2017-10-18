@@ -197,6 +197,7 @@ div{display: inline-block;}
 .cont_img>.img:nth-child(4)::after{
     content:'yxjie0328';
 }
+footer{display: none;}
 @media screen and (min-width:671px) and (max-width:1050px) {
     .cont_img{
         justify-content: left;

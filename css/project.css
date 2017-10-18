@@ -132,84 +132,43 @@ div{display: inline-block;}
     color: #666;
     font-size: 20px;
 }
-.cont_img{
+.cont_prj{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.cont_img>.img{
-    width: 30vw;height: 20vw;
-    line-height: 20vw;
-    text-align: center;
-    margin: 0.5vw 0;
-    background-repeat: no-repeat;
-    background-size: 120%;
-    background-position: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 20px;
-    position: relative;
-    overflow: hidden;
+.cont_prj>.prj{
+    width: 28vw;height: 18vw;
+    border-radius: .5vw;
     box-shadow: .4vw .2vw .8vw .1vw rgb(85, 83, 83);
-    border-radius: .6vw;
+    background-color: rgb(253, 251, 251);
+    margin: .3vw .5vw;
+    padding: .5vw 1vw;
+    position: relative;
 }
-.cont_img>.img:nth-child(1){
-    background-image: url('../images/01.png');
-}
-.cont_img>.img:nth-child(2){
-    background-image: url('../images/02.png');
-}
-.cont_img>.img:nth-child(3){
-    background-image: url('../images/03.png');
-}
-.cont_img>.img:nth-child(4){
-    background-image: url('../images/04.png');
-}
-.cont_img>.img:hover{
-    cursor: pointer;
-    background-size: 130%;
-}
-.cont_img>.img::after{
-    display: inline-block;
-    width: 30vw;height: 5vw;
-    line-height: 5vw;
-    text-align: center;
-    background-color: rgba(0, 0, 0, .3);
+.cont_prj>.prj>.twoa{
     position: absolute;
-    bottom: -5vw;left: 0;
-    transition: all .3s ease;
-    border-radius: .3vw;
-    font-weight: lighter;
+    top: 10px;right: 10px;   
 }
-.cont_img>.img:hover::after{
-    bottom: 0;
+.cont_prj>.prj>.twoa>a{
+    margin-right: 5px;
+    color: skyblue;
+    text-decoration: none;
+    font-weight: bold;
 }
-.cont_img>.img:nth-child(1)::after{
-    content:'江西农业大学';
+.cont_prj>.prj>p{
+    color: #666;
 }
-.cont_img>.img:nth-child(2)::after{
-    content:'18575578732';
-}
-.cont_img>.img:nth-child(3)::after{
-    content:'leirt97@gmail.com';
-}
-.cont_img>.img:nth-child(4)::after{
-    content:'yxjie0328';
-}
-@media screen and (min-width:671px) and (max-width:1050px) {
-    .cont_img{
+@media screen and (min-width:691px) and (max-width:1160px) {
+    .cont_prj{
         justify-content: left;
     }
-    .cont_img>.img{
-        width: 50vw;height: 30vw;
-        line-height: 30vw;
+    .cont_prj>.prj{
+        width: 50vw;height: auto;
         margin: 1vw 0;
     }
-    .cont_img>.img::after{
-        width: 50vw;height: 8vw;
-        line-height: 8vw;   
-        bottom: -8vw;
+    .cont_prj>.prj>p{
+        padding-bottom: 20px;
     }
 }
-

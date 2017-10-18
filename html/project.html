@@ -5,9 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <link rel="icon" type="image/x-icon" href="../icon/resume.png">
+    <link rel="stylesheet" href="../css/project.css" media="(min-width:691px)">
+    <link rel="stylesheet" href="../css/projectM.css" media="(max-width:690px)">
     <title>项目经验</title>
 </head>
 <body>
-    <div>项目经验</div>
+    <div class="nav">
+        <div class="nav_head">
+            <h1>Resume</h1>
+            <span data-url="down" class="animate"></span>
+        </div>
+        <ul class="animate">
+            <li class="animate" data-html="index">Home</li>
+            <li class="animate" data-html="info">BasicInfo</li>
+            <li class="animate" data-html="ability">Ability</li>
+            <li class="animate active" data-html="project">Project</li>
+            <li class="animate" data-html="connect">Connect</li>
+        </ul>
+        <div class="nav_footer">
+            <ul>
+                <li><a class="animate" href="https://www.github.com/leirt97"></a></li>
+                <li><a class="animate" href="#"></a></li>
+                <li><a class="animate" href="http://weibo.com/u/5242053562?refer_flag=1001030201_&is_all=1"></a></li>                
+            </ul>
+            <p>&copy;leirt97's resume 2017</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cont_head">
+            <h1>项目经验</h1>
+            <p>我的项目</p>
+        </div>
+        <hr>
+        <div class="cont_prj">
+            <div class="prj">
+                <h2>resume</h2>
+                <div class="twoa">
+                    <a href="https://leirt97.github.io/Resume/index.html">预览</a>
+                    <a href="https://github.com/leirt97/Resume">代码</a>
+                </div>
+                <p>项目描述：</p>
+            </div>
+            <div class="prj">
+                <h2>圆盘时钟</h2>
+                <div class="twoa">
+                    <a href="https://leirt97.github.io/simpleClock/clock.html">预览</a>
+                    <a href="https://github.com/leirt97/simpleClock">代码</a>
+                </div>
+                <p>项目描述：使用CSS3＋原生Js制作的简易时钟，简洁美观。帮助巩固了我的HTML、CSS、JavaScript基础。</p>
+            </div>
+            <div class="prj">
+                <h2>飞猿项目</h2>
+                <div class="twoa">
+                    <a href="https://github.com/leirt97/data-management">预览</a>
+                    <a href="https://github.com/leirt97/data-management">代码</a>
+                </div>
+                <p>项目描述：小组完成了一个仿照拉钩网站的飞猿项目，我做的是后台数据管理页面。主要使用技术有Vue、Vue-resource、Node.js、mongodb等。管理通过前端请求->路由分配->后台处理->数据库更新。是一个完整的从前到后的开发项目。这个项目中解决了前后端数据交互的一些问题，让我更加深入的理解了前后端分离这一前端趋势，也让我明白了团队合作的重要性。</p>
+            </div>
+            <div class="prj">
+                <h2>饿了么</h2>
+                <div class="twoa">
+                    <a href="https://leirt97.github.io/react-eleme/index.html   ">预览</a>
+                    <a href="https://github.com/leirt97/react-eleme">代码</a>
+                </div>                
+                <p>项目描述：个人模仿饿了么做了一个低配的饿了么移动端，数据是自己写的比较少，个人中心和订单页需登录后查看，实现了下订单。使用react、redux、react-redux、react-router进行实现。最好在Chrome手机模式下浏览。这是我学习react之后的第一个项目，让我对组件化、模块化有了更深的了解，也让我对前端框架有了更清晰的认识。</p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script>
+        $(function(){
+            $('.nav_head>span').on('click', e => {
+                if(($(e.target).attr('data-url').indexOf('down')!=-1)) {
+                    $(e.target).attr('data-url','up').addClass('up');
+                    $('.nav>ul').css('top', '95px');
+                } else {
+                    $(e.target).attr('data-url','down').removeClass('up');
+                    $('.nav>ul').css('top', '-500px');
+                }                   
+            })
+            $('.nav>ul').on('click', e => {
+                let html = $(e.target).attr('data-html');
+                if('index' === html) {
+                    window.location.href = '../index.html';
+                } else {
+                    window.location.href = './'+html+'.html';
+                }
+            })
+        })
+    </script>
 </body>
 </html>

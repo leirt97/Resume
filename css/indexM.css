@@ -37,7 +37,7 @@
 .sort>.font>span:nth-child(2){
     line-height: 29vh;
     font-size: 3vw;
-    left: 85%;  
+    left: 65%;  
     opacity: 0;
     transition: all .5s ease;
 } 
